@@ -1,3 +1,15 @@
+import traceback
+try:
+    # todo o seu código atual do app aqui
+    pass
+except Exception:
+    erro = traceback.format_exc()
+    from kivy.app import App
+    from kivy.uix.label import Label
+    class ErroApp(App):
+        def build(self):
+            return Label(text=erro, text_size=(900, None))
+    ErroApp().run()
 import os
 from kivy.app import App
 from kivy.clock import Clock
