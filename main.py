@@ -53,4 +53,5 @@ class AnneApp(App):
     def escrever(self, texto):
         self.chat.text += texto + "\n\n"
         Clock.schedule_once(
-            lambda dt: setattr(self.scroll, "scroll_y", 0
+            lambda dt: setattr(self.scroll, "scroll_y", 0)
+        )
